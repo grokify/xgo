@@ -7,12 +7,12 @@ import (
 )
 
 type Config struct {
-	Host               string `json:"host,omitempty`
-	Port               int    `json:"port,omitempty`
-	Password           string `json:"password,omitempty`
-	CustomIndex        int    `json:"customIndex,omitempty` // Redis Database Index
-	Region             string `json:"region,omitempty"`     // DynamoDB
-	Table              string `json:"table,omitempty"`      // DynamoDB
+	Host               string `json:"host,omitempty"`
+	Port               int    `json:"port,omitempty"`
+	Password           string `json:"password,omitempty"`
+	CustomIndex        int    `json:"customIndex,omitempty"` // Redis Database Index
+	Region             string `json:"region,omitempty"`      // DynamoDB
+	Table              string `json:"table,omitempty"`       // DynamoDB
 	Directory          string `json:"directory,omitempty"`
 	FileMode           uint32 `json:"fileMode,omitempty"`
 	DynamodbReadUnits  int64  `json:"dynamodbReadUnits,omitempty"`

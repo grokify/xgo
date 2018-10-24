@@ -15,8 +15,13 @@ import (
 	"github.com/grokify/gostor"
 )
 
+const (
+	KeyName   = "key"
+	ValueName = "value"
+)
+
 type Item struct {
-	Key   string `json:"value"`
+	Key   string `json:"key"`
 	Value string `json:"value"`
 }
 
@@ -34,6 +39,13 @@ func NewClient(cfg gostor.Config) (*Client, error) {
 	if len(cfg.Table) == 0 {
 		return nil, errors.New("E_NO_TABLE_FOR_DYNAMODB")
 	}
+	if cfg.DynamodbReadUnits == 0 {
+		cfg.DynamodbReadUnits = 1
+	}
+	if cfg.DynamodbWriteUnits == 0 {
+		cfg.DynamodbWriteUnits = 1
+	}
+
 	sess, err := session.NewSession(NewAwsConfig(cfg))
 	if err != nil {
 		return nil, err
@@ -89,6 +101,36 @@ func (client Client) GetOrEmptyString(key string) string {
 		return ""
 	}
 	return val
+}
+
+func (client Client) CreateTable() (*dynamodb.CreateTableOutput, error) {
+	return client.dynamodbClient.CreateTable(client.createTableInput())
+}
+
+func (client Client) createTableInput() *dynamodb.CreateTableInput {
+	return &dynamodb.CreateTableInput{
+		AttributeDefinitions: []*dynamodb.AttributeDefinition{
+			{
+				AttributeName: aws.String(KeyName),
+				AttributeType: aws.String("S"),
+			},
+			{
+				AttributeName: aws.String(ValueName),
+				AttributeType: aws.String("S"),
+			},
+		},
+		KeySchema: []*dynamodb.KeySchemaElement{
+			{
+				AttributeName: aws.String(KeyName),
+				KeyType:       aws.String("HASH"),
+			},
+		},
+		ProvisionedThroughput: &dynamodb.ProvisionedThroughput{
+			ReadCapacityUnits:  aws.Int64(client.config.DynamodbReadUnits),
+			WriteCapacityUnits: aws.Int64(client.config.DynamodbWriteUnits),
+		},
+		TableName: aws.String(client.config.Table),
+	}
 }
 
 func NewAwsConfig(cfg gostor.Config) *aws.Config {

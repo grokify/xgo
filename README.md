@@ -7,7 +7,7 @@
 
 ## Description
 
-GoStor provides a storage abstraction layer for various storage engines.
+GoStor provides a storage abstraction layer for various storage engines with a common configuration struct.
 
 Initially, it's goal is to provide services for simple key value string storage.
 

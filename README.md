@@ -5,6 +5,17 @@
 [![Docs][docs-godoc-svg]][docs-godoc-link]
 [![License][license-svg]][license-link]
 
+## Description
+
+GoStor provides a storage abstraction layer for various storage engines.
+
+Initially, it's goal is to provide services for simple key value string storage.
+
+Supported engines include:
+
+* DynamoDB
+* Redis
+
  [build-status-svg]: https://api.travis-ci.org/grokify/gostor.svg?branch=master
  [build-status-link]: https://travis-ci.org/grokify/gostor
  [goreport-svg]: https://goreportcard.com/badge/github.com/grokify/gostor

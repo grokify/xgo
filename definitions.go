@@ -11,6 +11,8 @@ type Config struct {
 	Port        int    `json:"port,omitempty`
 	Password    string `json:"password,omitempty`
 	CustomIndex int    `json:"customIndex,omitempty` // Redis Database Index
+	Region      string `json:"region,omitempty"`     // DynamoDB
+	Table       string `json:"table,omitempty"`      // DynamoDB
 }
 
 func ParseConfig(jsonBytes []byte) (*Config, error) {
@@ -33,5 +35,6 @@ func (cfg *Config) HostPort() string {
 
 type Client interface {
 	SetString(key, val string) error
+	GetString(key string) (string, error)
 	GetOrEmptyString(key string) string
 }

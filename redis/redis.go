@@ -18,11 +18,16 @@ func (client Client) SetString(key, val string) error {
 	return client.redisClient.Set(key, val, 0).Err()
 }
 
+func (client Client) GetString(key string) (string, error) {
+	return client.redisClient.Get(key).Result()
+}
+
 func (client Client) GetOrEmptyString(key string) string {
-	if val, err := client.redisClient.Get(key).Result(); err == nil {
+	if val, err := client.redisClient.Get(key).Result(); err != nil {
+		return ""
+	} else {
 		return val
 	}
-	return ""
 }
 
 func NewRedisOptions(cfg gostor.Config) *redisLib.Options {

@@ -1,0 +1,52 @@
+package files
+
+import (
+	"io/ioutil"
+	"os"
+	"strings"
+
+	"github.com/grokify/gostor"
+)
+
+type Item struct {
+	Key   string `json:"value"`
+	Value string `json:"value"`
+}
+
+type Client struct {
+	config gostor.Config
+}
+
+func NewClient(cfg gostor.Config) *Client {
+	return &Client{config: cfg}
+}
+
+func KeyToFilename(key string) string {
+	return strings.TrimSpace(key) + ".txt"
+}
+
+func (client Client) SetString(key, val string) error {
+
+	//tempval, err2 = strconv.ParseUint(data["Perm"], 10, 32)
+
+	return ioutil.WriteFile(
+		KeyToFilename(key),
+		[]byte(val),
+		os.FileMode(client.config.FileMode))
+}
+
+func (client Client) GetString(key string) (string, error) {
+	data, err := ioutil.ReadFile(KeyToFilename(key))
+	if err != nil {
+		return "", err
+	}
+	return string(data), nil
+}
+
+func (client Client) GetOrEmptyString(key string) string {
+	val, err := client.GetString(key)
+	if err != nil {
+		return ""
+	}
+	return val
+}

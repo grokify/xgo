@@ -13,6 +13,8 @@ type Config struct {
 	CustomIndex int    `json:"customIndex,omitempty` // Redis Database Index
 	Region      string `json:"region,omitempty"`     // DynamoDB
 	Table       string `json:"table,omitempty"`      // DynamoDB
+	Directory   string `json:"directory,omitempty"`
+	FileMode    uint32 `json:"fileMode,omitempty"`
 }
 
 func ParseConfig(jsonBytes []byte) (*Config, error) {

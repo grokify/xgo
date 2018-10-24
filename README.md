@@ -14,6 +14,7 @@ Initially, it's goal is to provide services for simple key value string storage.
 Supported engines include:
 
 * DynamoDB
+* Files
 * Redis
 
  [build-status-svg]: https://api.travis-ci.org/grokify/gostor.svg?branch=master

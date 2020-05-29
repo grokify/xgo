@@ -1,6 +1,9 @@
 package redis
 
 import (
+	"context"
+	"time"
+
 	redisLib "github.com/go-redis/redis"
 	"github.com/grokify/gostor"
 )
@@ -15,15 +18,19 @@ func NewClient(cfg gostor.Config) *Client {
 }
 
 func (client Client) SetString(key, val string) error {
-	return client.redisClient.Set(key, val, 0).Err()
+	// For context, see https://github.com/go-redis/redis/issues/582
+	ctx, _ := context.WithTimeout(context.TODO(), time.Second)
+	return client.redisClient.Set(ctx, key, val, 0).Err()
 }
 
 func (client Client) GetString(key string) (string, error) {
-	return client.redisClient.Get(key).Result()
+	ctx, _ := context.WithTimeout(context.TODO(), time.Second)
+	return client.redisClient.Get(ctx, key).Result()
 }
 
 func (client Client) GetOrEmptyString(key string) string {
-	if val, err := client.redisClient.Get(key).Result(); err != nil {
+	ctx, _ := context.WithTimeout(context.TODO(), time.Second)
+	if val, err := client.redisClient.Get(ctx, key).Result(); err != nil {
 		return ""
 	} else {
 		return val

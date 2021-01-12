@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
+	"log"
 
 	"github.com/grokify/gostor"
 	"github.com/grokify/gostor/redis"
 	"github.com/jessevdk/go-flags"
-	log "github.com/sirupsen/logrus"
 )
 
 type Options struct {

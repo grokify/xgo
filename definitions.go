@@ -41,6 +41,6 @@ type Client interface {
 	SetString(key, val string) error
 	GetString(key string) (string, error)
 	GetOrEmptyString(key string) string
-	SetInterface(key string, object interface{}) error
-	GetInterface(key string, object interface{}) error
+	SetInterface(key string, val interface{}) error
+	GetInterface(key string, val interface{}) error
 }

@@ -1,7 +1,6 @@
 package files
 
 import (
-	"io/ioutil"
 	"os"
 	"strings"
 
@@ -29,14 +28,14 @@ func (client Client) SetString(key, val string) error {
 
 	//tempval, err2 = strconv.ParseUint(data["Perm"], 10, 32)
 
-	return ioutil.WriteFile(
+	return os.WriteFile(
 		KeyToFilename(key),
 		[]byte(val),
 		os.FileMode(client.config.FileMode))
 }
 
 func (client Client) GetString(key string) (string, error) {
-	data, err := ioutil.ReadFile(KeyToFilename(key))
+	data, err := os.ReadFile(KeyToFilename(key))
 	if err != nil {
 		return "", err
 	}

@@ -25,9 +25,7 @@ func KeyToFilename(key string) string {
 }
 
 func (client Client) SetString(key, val string) error {
-
-	//tempval, err2 = strconv.ParseUint(data["Perm"], 10, 32)
-
+	// tempval, err2 = strconv.ParseUint(data["Perm"], 10, 32)
 	return os.WriteFile(
 		KeyToFilename(key),
 		[]byte(val),

@@ -3,7 +3,7 @@ module github.com/grokify/gostor
 go 1.18
 
 require (
-	github.com/aws/aws-sdk-go v1.47.2
+	github.com/aws/aws-sdk-go v1.47.9
 	github.com/go-redis/redis/v8 v8.11.5
 	github.com/jessevdk/go-flags v1.5.0
 )

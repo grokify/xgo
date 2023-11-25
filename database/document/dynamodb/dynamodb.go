@@ -12,7 +12,7 @@ import (
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/dynamodb"
 	"github.com/aws/aws-sdk-go/service/dynamodb/dynamodbattribute"
-	"github.com/grokify/gostor"
+	"github.com/grokify/sogo/database/document"
 )
 
 const (
@@ -26,11 +26,11 @@ type Item struct {
 }
 
 type Client struct {
-	config         gostor.Config
+	config         document.Config
 	dynamodbClient *dynamodb.DynamoDB
 }
 
-func NewClient(cfg gostor.Config) (*Client, error) {
+func NewClient(cfg document.Config) (*Client, error) {
 	cfg.Region = strings.TrimSpace(cfg.Region)
 	if len(cfg.Region) == 0 {
 		return nil, errors.New("E_NO_REGION_FOR_AWS")
@@ -133,7 +133,7 @@ func (client Client) createTableInput() *dynamodb.CreateTableInput {
 	}
 }
 
-func NewAwsConfig(cfg gostor.Config) *aws.Config {
+func NewAwsConfig(cfg document.Config) *aws.Config {
 	return &aws.Config{
 		Region: aws.String(cfg.Region)}
 }

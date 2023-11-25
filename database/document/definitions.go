@@ -1,4 +1,4 @@
-package gostor
+package document
 
 import (
 	"encoding/json"

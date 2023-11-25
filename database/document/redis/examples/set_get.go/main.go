@@ -3,12 +3,12 @@ package main
 import (
 	"fmt"
 
-	"github.com/grokify/gostor"
-	"github.com/grokify/gostor/redis"
+	"github.com/grokify/sogo/database/document"
+	"github.com/grokify/sogo/database/document/redis"
 )
 
 func main() {
-	client := redis.NewClient(gostor.Config{
+	client := redis.NewClient(document.Config{
 		Host:        "127.0.0.1",
 		Port:        6379,
 		Password:    "",

@@ -4,7 +4,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/grokify/gostor"
+	"github.com/grokify/sogo/database/document"
 )
 
 type Item struct {
@@ -13,10 +13,10 @@ type Item struct {
 }
 
 type Client struct {
-	config gostor.Config
+	config document.Config
 }
 
-func NewClient(cfg gostor.Config) *Client {
+func NewClient(cfg document.Config) *Client {
 	return &Client{config: cfg}
 }
 

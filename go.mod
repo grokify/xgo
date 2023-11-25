@@ -1,4 +1,4 @@
-module github.com/grokify/gostor
+module github.com/grokify/sogo
 
 go 1.18
 

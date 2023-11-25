@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/grokify/gostor"
-	"github.com/grokify/gostor/redis"
+	"github.com/grokify/sogo/database/document"
+	"github.com/grokify/sogo/database/document/redis"
 	"github.com/jessevdk/go-flags"
 )
 
@@ -20,7 +20,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	client := redis.NewClient(gostor.Config{
+	client := redis.NewClient(document.Config{
 		Host:        "127.0.0.1",
 		Port:        6379,
 		Password:    "",

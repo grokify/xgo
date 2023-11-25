@@ -1,4 +1,4 @@
-module github.com/grokify/sogo
+module github.com/grokify/xgo
 
 go 1.21
 

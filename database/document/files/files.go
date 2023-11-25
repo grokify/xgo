@@ -4,7 +4,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/grokify/sogo/database/document"
+	"github.com/grokify/xgo/database/document"
 )
 
 type Item struct {

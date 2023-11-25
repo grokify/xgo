@@ -8,7 +8,7 @@ import (
 
 	"github.com/grokify/mogo/time/timeutil"
 	"github.com/grokify/mogo/type/stringsutil"
-	"github.com/grokify/sogo/reflect/reflectutil"
+	"github.com/grokify/xgo/reflect/reflectutil"
 )
 
 // Execute takes a template string and an `any`

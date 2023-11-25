@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 
 	redis "github.com/go-redis/redis/v8"
-	"github.com/grokify/sogo/database/document"
+	"github.com/grokify/xgo/database/document"
 )
 
 type Client struct {

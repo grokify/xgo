@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/grokify/sogo/database/document"
-	"github.com/grokify/sogo/database/document/redis"
+	"github.com/grokify/xgo/database/document"
+	"github.com/grokify/xgo/database/document/redis"
 )
 
 func main() {

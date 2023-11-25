@@ -7,15 +7,7 @@
 
 ## Description
 
-Sogo `database/document` provides a storage abstraction layer for various storage engines with a common configuration struct.
-
-Initially, it's goal is to provide services for simple key value string storage. This use case is very simple but often times you may want to use a different solution depending on your provider, e.g. DynamoDB for AWS, Redis for Heroku, and the local file system for testing.
-
-Supported engines include:
-
-* DynamoDB
-* Files
-* Redis
+SoGo is a collection of Go wrapper code to make using various Go libaries easier. Much of the original code for this library was originally in the []`github.com/grokify/mogo`](https://github.com/grokify/mogo) package, however, the code was extracted in the interest of reducing the dependencies associated with that module. This module freely uses additional dependencies, with the goal of limiting dependencies to specific packages.
 
  [build-status-svg]: https://github.com/grokify/sogo/workflows/build/badge.svg
  [build-status-link]: https://github.com/grokify/sogo/actions
@@ -26,4 +18,3 @@ Supported engines include:
  [license-svg]: https://img.shields.io/badge/license-MIT-blue.svg
  [license-link]: https://github.com/grokify/sogo/blob/master/LICENSE
  
-`sogo/database/document`` is designed to provide a generic interface to storage engines using a common config and setter/getter interface.

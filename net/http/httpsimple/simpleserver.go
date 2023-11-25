@@ -10,6 +10,7 @@ import (
 
 	"github.com/apex/gateway"
 	"github.com/buaazp/fasthttprouter"
+	"github.com/grokify/mogo/net/http/httputilmore"
 	"github.com/grokify/sogo/net/http/anyhttp"
 	"github.com/valyala/fasthttp"
 )
@@ -34,10 +35,8 @@ func Serve(svc SimpleServer) {
 	}
 	switch engine {
 	case EngineNetHTTP:
-		log.Fatal(
-			http.ListenAndServe(
-				portAddress(svc.PortInt()),
-				svc.Router()))
+		svr := httputilmore.NewServerTimeouts(portAddress(svc.PortInt()), svc.Router(), 1*time.Second)
+		log.Fatal(svr.ListenAndServe())
 	case EngineAWSLambda:
 		log.Fatal(
 			gateway.ListenAndServe(

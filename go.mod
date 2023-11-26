@@ -17,8 +17,10 @@ require (
 	github.com/gorilla/mux v1.8.1
 	github.com/grokify/mogo v0.61.0
 	github.com/jessevdk/go-flags v1.5.0
+	github.com/leekchan/accounting v1.0.0
 	github.com/oleiade/reflections v1.0.1
 	github.com/pkg/sftp v1.13.6
+	github.com/shopspring/decimal v1.3.1
 	github.com/tkuchiki/go-timezone v0.2.2
 	github.com/valyala/fasthttp v1.51.0
 	github.com/valyala/fastjson v1.6.4
@@ -32,6 +34,7 @@ require (
 	github.com/aws/aws-lambda-go v1.41.0 // indirect
 	github.com/caarlos0/env/v6 v6.10.1 // indirect
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect
+	github.com/cockroachdb/apd v1.1.0 // indirect
 	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
 	github.com/emersion/go-sasl v0.0.0-20231106173351-e73c9f7bad43 // indirect
 	github.com/google/go-querystring v1.1.0 // indirect

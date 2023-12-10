@@ -3,7 +3,7 @@ package currencyutil
 import (
 	"testing"
 
-	"github.com/grokify/mogo/data/currencyutil"
+	"github.com/grokify/mogo/text/currencyutil"
 	"github.com/shopspring/decimal"
 )
 

@@ -4,7 +4,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/grokify/mogo/data/currencyutil"
+	"github.com/grokify/mogo/text/currencyutil"
 	"github.com/leekchan/accounting"
 )
 

@@ -5,8 +5,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/grokify/mogo/data/currencyutil"
 	"github.com/grokify/mogo/strconv/strconvutil"
+	"github.com/grokify/mogo/text/currencyutil"
 	"github.com/shopspring/decimal"
 )
 

@@ -7,7 +7,7 @@ go 1.21
 require (
 	github.com/apex/gateway v1.1.2
 	github.com/asaskevich/govalidator v0.0.0-20230301143203-a9d515a09cc2
-	github.com/aws/aws-sdk-go v1.49.12
+	github.com/aws/aws-sdk-go v1.49.13
 	github.com/buaazp/fasthttprouter v0.1.1
 	github.com/buger/jsonparser v1.1.1
 	github.com/derekstavis/go-qs v0.0.0-20180720192143-9eef69e6c4e7
@@ -47,7 +47,7 @@ require (
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
-	golang.org/x/exp v0.0.0-20231219180239-dc181d75b848 // indirect
+	golang.org/x/exp v0.0.0-20231226003508-02704c960a9b // indirect
 	golang.org/x/sys v0.15.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
 )

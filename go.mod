@@ -30,8 +30,8 @@ require (
 )
 
 require (
-	github.com/andybalholm/brotli v1.0.6 // indirect
-	github.com/aws/aws-lambda-go v1.43.0 // indirect
+	github.com/andybalholm/brotli v1.1.0 // indirect
+	github.com/aws/aws-lambda-go v1.44.0 // indirect
 	github.com/caarlos0/env/v6 v6.10.1 // indirect
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect
 	github.com/cockroachdb/apd v1.1.0 // indirect

@@ -15,7 +15,7 @@ require (
 	github.com/go-logfmt/logfmt v0.6.0
 	github.com/go-redis/redis/v8 v8.11.5
 	github.com/gorilla/mux v1.8.1
-	github.com/grokify/mogo v0.62.8
+	github.com/grokify/mogo v0.63.0
 	github.com/jessevdk/go-flags v1.5.0
 	github.com/leekchan/accounting v1.0.0
 	github.com/oleiade/reflections v1.0.1
@@ -31,7 +31,7 @@ require (
 
 require (
 	github.com/andybalholm/brotli v1.1.0 // indirect
-	github.com/aws/aws-lambda-go v1.45.0 // indirect
+	github.com/aws/aws-lambda-go v1.46.0 // indirect
 	github.com/caarlos0/env/v6 v6.10.1 // indirect
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect
 	github.com/cockroachdb/apd v1.1.0 // indirect
@@ -41,7 +41,7 @@ require (
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	github.com/joho/godotenv v1.5.1 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
-	github.com/klauspost/compress v1.17.4 // indirect
+	github.com/klauspost/compress v1.17.5 // indirect
 	github.com/kr/fs v0.1.0 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect

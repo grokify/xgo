@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/grokify/xgo/text/markdown"
+	"github.com/grokify/sogo/text/markdown"
 )
 
 func main() {

@@ -11,7 +11,7 @@ import (
 	"github.com/apex/gateway"
 	"github.com/buaazp/fasthttprouter"
 	"github.com/grokify/mogo/net/http/httputilmore"
-	"github.com/grokify/xgo/net/http/anyhttp"
+	"github.com/grokify/sogo/net/http/anyhttp"
 	"github.com/valyala/fasthttp"
 )
 

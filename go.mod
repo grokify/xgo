@@ -2,7 +2,7 @@ module github.com/grokify/sogo
 
 go 1.22
 
-toolchain go1.22.1
+toolchain go1.22.2
 
 require (
 	github.com/apex/gateway v1.1.2
@@ -31,7 +31,7 @@ require (
 
 require (
 	github.com/andybalholm/brotli v1.1.0 // indirect
-	github.com/aws/aws-lambda-go v1.46.0 // indirect
+	github.com/aws/aws-lambda-go v1.47.0 // indirect
 	github.com/caarlos0/env/v6 v6.10.1 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
 	github.com/cockroachdb/apd v1.1.0 // indirect

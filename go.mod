@@ -7,7 +7,7 @@ toolchain go1.22.2
 require (
 	github.com/apex/gateway v1.1.2
 	github.com/asaskevich/govalidator v0.0.0-20230301143203-a9d515a09cc2
-	github.com/aws/aws-sdk-go v1.53.9
+	github.com/aws/aws-sdk-go v1.53.10
 	github.com/buaazp/fasthttprouter v0.1.1
 	github.com/buger/jsonparser v1.1.1
 	github.com/derekstavis/go-qs v0.0.0-20180720192143-9eef69e6c4e7
@@ -15,7 +15,7 @@ require (
 	github.com/go-logfmt/logfmt v0.6.0
 	github.com/go-redis/redis/v8 v8.11.5
 	github.com/gorilla/mux v1.8.1
-	github.com/grokify/mogo v0.63.11
+	github.com/grokify/mogo v0.64.0
 	github.com/jessevdk/go-flags v1.5.0
 	github.com/leekchan/accounting v1.0.0
 	github.com/oleiade/reflections v1.0.1
@@ -47,7 +47,7 @@ require (
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
-	golang.org/x/exp v0.0.0-20240506185415-9bf2ced13842 // indirect
+	golang.org/x/exp v0.0.0-20240525044651-4c93da0ed11d // indirect
 	golang.org/x/sys v0.20.0 // indirect
 	golang.org/x/text v0.15.0 // indirect
 )

@@ -15,7 +15,7 @@ require (
 	github.com/go-logfmt/logfmt v0.6.0
 	github.com/go-redis/redis/v8 v8.11.5
 	github.com/gorilla/mux v1.8.1
-	github.com/grokify/mogo v0.64.0
+	github.com/grokify/mogo v0.64.1
 	github.com/jessevdk/go-flags v1.5.0
 	github.com/leekchan/accounting v1.0.0
 	github.com/oleiade/reflections v1.0.1

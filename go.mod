@@ -17,13 +17,12 @@ require (
 	github.com/gorilla/mux v1.8.1
 	github.com/grokify/mogo v0.64.5
 	github.com/jessevdk/go-flags v1.6.1
-	github.com/jkeys089/jserial v1.0.1
 	github.com/leekchan/accounting v1.0.0
 	github.com/oleiade/reflections v1.0.1
 	github.com/pkg/sftp v1.13.6
 	github.com/shopspring/decimal v1.4.0
 	github.com/tkuchiki/go-timezone v0.2.3
-	github.com/valyala/fasthttp v1.54.0
+	github.com/valyala/fasthttp v1.55.0
 	github.com/valyala/fastjson v1.6.4
 	github.com/valyala/quicktemplate v1.7.0
 	github.com/zhuyie/golzf v0.0.0-20161112031142-8387b0307ade

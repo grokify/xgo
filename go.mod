@@ -7,7 +7,7 @@ toolchain go1.22.2
 require (
 	github.com/apex/gateway v1.1.2
 	github.com/asaskevich/govalidator v0.0.0-20230301143203-a9d515a09cc2
-	github.com/aws/aws-sdk-go v1.54.2
+	github.com/aws/aws-sdk-go v1.54.4
 	github.com/buaazp/fasthttprouter v0.1.1
 	github.com/buger/jsonparser v1.1.1
 	github.com/derekstavis/go-qs v0.0.0-20180720192143-9eef69e6c4e7
@@ -17,7 +17,6 @@ require (
 	github.com/gorilla/mux v1.8.1
 	github.com/grokify/mogo v0.64.5
 	github.com/jessevdk/go-flags v1.6.1
-	github.com/jkeys089/jserial v1.0.1
 	github.com/leekchan/accounting v1.0.0
 	github.com/oleiade/reflections v1.0.1
 	github.com/pkg/sftp v1.13.6
